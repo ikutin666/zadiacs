@@ -1,0 +1,9 @@
+{
+  "name": "123",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "zodiacs": "^1.0.0"
+  }
+}

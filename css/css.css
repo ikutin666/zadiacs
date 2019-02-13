@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04.02.2019, 15:47:32
+    Author     : krutoy
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Ubuntu+Condensed&subset=latin,cyrillic);
+.text {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  
+  margin-bottom: 5px;
+}
+
+#Task_2
+{
+    position: absolute;
+    left: 400px;
+border: 2px solid;
+width: 250px;
+}
+
+#Task_1
+{
+    
+position: absolute;
+
+border: 2px solid;
+width: 350px;
+}
+
+#Task_3
+{
+    position: absolute;
+    left: 800px;
+    text-align: center;
+    border: 2px solid;
+    width: 250px;
+    height: 250px;
+}
+p
+{
+  font-size: 30px;  
+}
+
+#km
+{
+position: absolute;
+top:90px;
+left:15%;
+}
+#bt1
+{
+position: relative;
+
+left: 30%;
+}
+#sp1
+{
+position: relative;
+
+left: 20%;
+}
+
+#m
+{ 
+position: absolute;
+top:90px;
+left:50%;  
+}
+#background
+{
+ 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #171416f0;
+    visibility: hidden;
+    text-align: center;
+  vertical-align: center;
+
+}
+body
+{
+     background: url('../img/background.jpg');
+     
+     margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
