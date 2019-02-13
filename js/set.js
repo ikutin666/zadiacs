@@ -2,7 +2,7 @@
 var $=require('jquery');
 
 var func={
-			zodiacs:{ 
+			zadiacs:{ 
 				1:{start:"21.01",end:"20.02",name:'Водолей',previous:12,next:2},
 				2:{start:"21.02",end:"20.03",name:'Рыбы',previous:1,next:3},
 				3:{start:"21.03",end:"20.04",name:'Овен',previous:2,next:4},
@@ -47,37 +47,40 @@ var func={
 	
 	
 	
-	get_zodiac: function(zo)
+	get_zadiac: function(zo)
     {
         try
         {
-            var val=zo.value.split("-"); //разбиваем дату
-            $('#zod').text("Ваш знак зодиака: "+func.zodiacs.get_name(val)); // пишем знак зодиака  
+            var val=zo.split("-"); //разбиваем дату
+            
+			return func.zadiacs.get_name(val); // пишем знак зодиака  
         }
         catch(e)
         {
             console.log(e);
         }
     },
-    conversion: function()
+    conversion: function(value)
     {
         try
          {
-             var val1 =$('#sp').val()/3.6;
-             $('#sp1').val(val1.toFixed(2));
-            }
+            // var val1 =$('#sp').val()/3.6;
+            var value=$('#sp').val()/3.6;
+			 //$('#sp1').val(val1.toFixed(2));
+            return value.toFixed(2);
+			}
          catch(e)
             {
               console.log(e);
          }
     },
- submit: function()
+ submit: function(v1,v2,v3,url)
     {
       //$('#txa').css("opacity",0.5);
-        if($('#login').val()!=''&& $('#pass').val()!='')
+        if($(v1).val()!=''&& $(v2).val()!='')
         {
          
-            $('#background').css("visibility", "visible");
+            $(v3).css("visibility", "visible");
                     //иммитирование процесса авторизации  
          var time=setTimeout(
             function()
@@ -85,7 +88,7 @@ var func={
                  try
                 {
                    var url='blank.html'; //ссылка для перехода после успешной авторизации
-                    $(location).attr('href',url);
+                   $(location).attr('href',url);
                 }
                 catch(e)
                 {

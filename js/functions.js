@@ -10,21 +10,23 @@
 
 var $=require('jquery');
 var  func=require('./set.js');
- 
+require('style-loader!css-loader!../css/css.css');
+require('style-loader!css-loader!../css/kickstart-buttons.css');
+require('style-loader!css-loader!../css/kickstart-forms.css'); 
 $('#bt1').on('click',function(event)
 	{
-		func.conversion(this);
+		$('#sp1').val(func.conversion($('#sp').val()));
 		
 	});
 	
 $('#date1').on('change',function(event)
 	{
-		func.get_zodiac(this);
+		$('#zad').text("ваш знак задиака "+func.get_zadiac($('#date1').val()));
 		
 	});
 
 $('#pass1').on('click',function(event)
 	{
-		func. submit();
+		func. submit("#login","#pass","#background","/blank.html");
 		
 	});	

@@ -1,2 +1,4 @@
-modules
+module
 node_modules
+module
+webpack.config.js
